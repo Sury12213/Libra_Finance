@@ -1,0 +1,172 @@
+.merge-modal {
+  max-width: 600px;
+}
+
+.merge-info-banner {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  color: #60a5fa;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.merge-warning {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: 8px;
+  color: #fbbf24;
+}
+
+.merge-warning-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.merge-warning-text {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.merge-preview {
+  background: #252631;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.merge-preview-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.merge-preview-section {
+  margin-bottom: 1rem;
+}
+
+.merge-preview-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.75rem;
+}
+
+.merge-nft-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.merge-nft-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #1a1b23;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+}
+
+.merge-arrow {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  color: #3b82f6;
+}
+
+.merge-result-card {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.merge-result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.merge-check {
+  color: #10b981;
+}
+
+.merge-confirm-box {
+  text-align: center;
+  padding: 2rem;
+  background: #252631;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.merge-confirm-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.merge-confirm-text {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.merge-confirm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+}
+
+.merge-button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.merge-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.merge-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #2d2e3a;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.merge-loading-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.merge-loading-text {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}

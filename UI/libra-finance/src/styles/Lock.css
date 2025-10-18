@@ -1,0 +1,179 @@
+.lock-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.lock-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.intro-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lock-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.lock-header p {
+  color: #94a3b8;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-box {
+  background: #1e293b;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.locks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lock-item {
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 1.25rem;
+  background: #0a0f1e;
+}
+
+.lock-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+
+.lock-item-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lock-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lock-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.lock-title h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.lock-title span {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.lock-meta {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+.lock-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #334155;
+}
+
+.lock-stats p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.lock-stats h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.btn-outline {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Header main button */
+.btn-header-primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-header-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Withdraw or item actions */
+.btn-item-outline {
+  border: 1px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-item-outline:hover {
+  background: rgba(37, 99, 235, 0.1);
+}

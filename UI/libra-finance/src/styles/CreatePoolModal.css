@@ -1,0 +1,363 @@
+.create-pool-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.create-pool-modal {
+  background: #1e293b;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.create-pool-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.create-pool-modal-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: rgb(59, 130, 246);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.create-pool-modal-close {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.create-pool-modal-close:hover {
+  background: #334155;
+  color: #ffffff;
+}
+
+.create-pool-modal-body {
+  padding: 1.5rem;
+}
+
+.create-pool-section {
+  margin-bottom: 1.5rem;
+}
+
+.create-pool-section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(59, 130, 246);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.token-pair-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.token-select-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.token-select-button {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #ffffff;
+}
+
+.token-select-button:hover {
+  border-color: #3b82f6;
+  background: #1e293b;
+}
+
+.token-select-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.token-select-info {
+  flex: 1;
+  text-align: left;
+}
+
+.token-select-symbol {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.token-select-name {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.token-pair-plus {
+  color: #94a3b8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.fee-level-options {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.fee-level-option {
+  flex: 1;
+  background: #0f172a;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.fee-level-option:hover {
+  border-color: #3b82f6;
+}
+
+.fee-level-option.active {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.fee-level-percentage {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.fee-level-type {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.price-input-wrapper {
+  position: relative;
+}
+
+.price-input {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  padding-left: 3rem;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.price-input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.deposit-amount-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.deposit-amount-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.deposit-amount-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.deposit-amount-balance {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.deposit-amount-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.deposit-amount-token {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+.deposit-amount-token-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.deposit-amount-token-symbol {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.deposit-amount-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right;
+  outline: none;
+}
+
+.deposit-amount-input::placeholder {
+  color: #475569;
+}
+
+.deposit-amount-usd {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+}
+
+.create-pool-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.create-pool-button {
+  flex: 1;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.create-pool-button-secondary {
+  background: #334155;
+  color: #ffffff;
+}
+
+.create-pool-button-secondary:hover {
+  background: #334155;
+}
+
+.create-pool-button-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+}
+
+.create-pool-button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(38, 27, 189, 0.3);
+}
+
+.create-pool-button-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #334155;
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}

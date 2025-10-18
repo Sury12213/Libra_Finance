@@ -1,0 +1,149 @@
+.liquidity-summary {
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.summary-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.summary-desc {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.summary-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Pools section */
+.pools-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pools-header-left {
+  display: flex;
+  gap: 1rem;
+}
+
+.pools-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  background: #1e3a8a;
+  color: #3b82f6;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-input {
+  padding-left: 3rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+/* Table */
+.pool-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.pool-icons {
+  display: flex;
+}
+
+.pool-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #64748b;
+}
+
+.pool-name {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.pool-sub {
+  font-size: 0.75rem;
+  color: #3b82f6;
+}
+
+.tvl {
+  font-weight: 600;
+}
+
+.apr {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.add-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}

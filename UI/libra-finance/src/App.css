@@ -1,0 +1,409 @@
+.app {
+  min-height: 100vh;
+  background-color: #0a0e1a;
+}
+
+/* Navigation */
+.navigation {
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo-icon img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: #1e293b;
+}
+
+.nav-link.active {
+  color: #3b82f6;
+  background-color: #1e293b;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Wallet Connection Styles */
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wallet-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #1e293b;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+}
+
+.connect-wallet-button {
+  padding: 0.5rem 1.25rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.connect-wallet-button:hover {
+  background-color: #2563eb;
+}
+
+.connect-wallet-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.disconnect-button {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.disconnect-button:hover {
+  background-color: #334155;
+  color: #ef4444;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Cards */
+.card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.card-elevated {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+.btn-secondary {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #334155;
+}
+
+/* Input */
+.input {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #e2e8f0;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Select */
+.select {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #e2e8f0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.stat-label {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #334155;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.table tr:hover {
+  background-color: #1e293b;
+}
+
+/* Token Selector */
+.token-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.token-selector:hover {
+  border-color: #3b82f6;
+}
+
+.token-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.token-info {
+  flex: 1;
+}
+
+.token-symbol {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.token-balance {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* Pool Card */
+.pool-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.pool-card:hover {
+  border-color: #3b82f6;
+}
+
+.pool-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.pool-tokens {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pool-icons {
+  display: flex;
+  align-items: center;
+}
+
+.pool-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #1e293b;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.pool-icon:not(:first-child) {
+  margin-left: -8px;
+}
+
+.pool-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pool-type {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  background-color: #1e3a8a;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pool-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.pool-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pool-stat-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.pool-stat-value {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
