@@ -1,8 +1,9 @@
 "use client";
 
 import { Link, useLocation } from "react-router-dom";
-import { Menu, Scale } from "lucide-react";
+import { Menu, Scale, ChevronDown } from "lucide-react";
 import { useWallet } from "../hooks/useWallet";
+import { useState } from "react";
 
 function Navigation() {
   const location = useLocation();
@@ -13,6 +14,8 @@ function Navigation() {
     disconnectWallet,
     formatAddress,
   } = useWallet();
+
+  const [showMoreMenu, setShowMoreMenu] = useState(false);
 
   const isActive = (path) => {
     return location.pathname === path ? "active" : "";
@@ -73,6 +76,36 @@ function Navigation() {
               >
                 Incentivize
               </Link>
+            </li>
+
+            {/* More dropdown */}
+            <li className="nav-more" style={{ position: "relative" }}>
+              <button
+                className="nav-link more-button"
+                onClick={() => setShowMoreMenu((prev) => !prev)}
+              >
+                More
+                <ChevronDown size={16} style={{ marginLeft: "4px" }} />
+              </button>
+
+              {showMoreMenu && (
+                <div className="more-menu">
+                  <Link
+                    to="/libra-lend"
+                    className="more-menu-item"
+                    onClick={() => setShowMoreMenu(false)}
+                  >
+                    Libra Lend
+                  </Link>
+                  <Link
+                    to="/perpetual"
+                    className="more-menu-item"
+                    onClick={() => setShowMoreMenu(false)}
+                  >
+                    Perpetual
+                  </Link>
+                </div>
+              )}
             </li>
           </ul>
         </div>

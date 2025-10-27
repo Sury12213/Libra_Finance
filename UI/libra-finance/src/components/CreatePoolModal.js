@@ -10,8 +10,8 @@ import {
   approveToken,
   getTokenContract,
   getSigner,
+  getPoolFactoryContract,
 } from "../utils/web3";
-import { getPoolFactoryContract } from "../utils/web3";
 import { ethers } from "ethers";
 import "../styles/CreatePoolModal.css";
 
@@ -139,7 +139,7 @@ function CreatePoolModal({ isOpen, onClose, openAddLiquidityModal }) {
       const mintTx = await poolContract.mint(account);
       await mintTx.wait();
 
-      // 6️⃣ Hiển thị thông báo thành công
+      //  Hiển thị thông báo thành công
       setSuccess(true);
       setTimeout(() => {
         setSuccess(false);

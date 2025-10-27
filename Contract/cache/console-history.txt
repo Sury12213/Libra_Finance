@@ -1,0 +1,13 @@
+await voter.setMinter("0x0823306314eD955f8fce5B45A6ad
+const voter = await ethers.getContractAt("Voter", "0xB921dB6A09AF93736B6B8D8E5E50D466e46c317C");
+await voter.distributeAll(ethers.parseEther("1000"));
+Object.keys(voter.interface.functions)
+const voter = await ethers.getContractAt("Voter", "0xB921dB6A09AF93736B6B8D8E5E50D466e46c317C");
+(await token.balanceOf(treasuryAddr)).toString();
+const treasuryAddr = await Minter.treasury();
+const token = await ethers.getContractAt("ERC20", tokenAddr);
+const tokenAddr = await Minter._token(); 
+// Kiểm tra balance hiện tại
+await Minter._token(); // hoặc rewardToken(), hoặc token() tùy code
+await Minter.treasury();
+const Minter = await ethers.getContractAt("Minter", "0x0823306314eD955f8fce5B45A6ad2E5EaE3F0f01");

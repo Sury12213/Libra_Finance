@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { X, HelpCircle } from "lucide-react";
 import { ethers } from "ethers";
-import { POOL_ABI, ERC20_ABI } from "../config/contracts";
+import { POOL_ABI, ERC20_ABI, CONTRACTS, VOTER_ABI } from "../config/contracts";
 import { useWallet } from "../hooks/useWallet";
 import { useTokenBalance } from "../hooks/useTokenBalance";
 import { getProvider } from "../utils/web3";
@@ -192,8 +192,51 @@ function AddLiquidityModal({ isOpen, onClose, pool }) {
       const mintTx = await poolContract.mint(account);
       await mintTx.wait();
 
-      setSuccess("Liquidity added successfully!");
-      setTimeout(() => onClose(), 1500);
+      console.log("✅ Liquidity added, now auto-staking LP to Gauge...");
+
+      // --- AUTO STAKE TO GAUGE ---
+      try {
+        const voter = new ethers.Contract(CONTRACTS.VOTER, VOTER_ABI, signer);
+        const gaugeAddr = await voter.gauges(pool.poolAddress);
+
+        if (gaugeAddr && gaugeAddr !== ethers.ZeroAddress) {
+          const lpToken = new ethers.Contract(
+            pool.poolAddress, // LP token = Pool address
+            ERC20_ABI,
+            signer
+          );
+          const lpBalance = await lpToken.balanceOf(account);
+
+          if (lpBalance > 0n) {
+            // Approve Gauge
+            const approveTx = await lpToken.approve(gaugeAddr, lpBalance);
+            await approveTx.wait();
+
+            // Deposit LP to Gauge
+            const gauge = new ethers.Contract(
+              gaugeAddr,
+              ["function deposit(uint256 amount) external"],
+              signer
+            );
+            const stakeTx = await gauge.deposit(lpBalance);
+            await stakeTx.wait();
+
+            console.log("✅ LP tokens auto-staked into Gauge:", gaugeAddr);
+            setSuccess("Liquidity added & staked successfully!");
+          } else {
+            console.warn("⚠️ No LP tokens found to stake.");
+            setSuccess("Liquidity added (no LP to stake)");
+          }
+        } else {
+          console.warn("⚠️ No Gauge found for this pool");
+          setSuccess("Liquidity added (no Gauge found)");
+        }
+      } catch (autoErr) {
+        console.error("❌ Auto-stake failed:", autoErr);
+        setSuccess("Liquidity added (stake failed)");
+      }
+
+      setTimeout(() => onClose(), 2000);
     } catch (err) {
       console.error("Error adding liquidity:", err);
       setError(err?.message || "Failed to add liquidity");

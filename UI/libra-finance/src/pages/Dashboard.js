@@ -7,6 +7,7 @@ import {
   getPoolFees,
 } from "../utils/web3";
 import { useWallet } from "../hooks/useWallet";
+import ChatBot from "../components/ChatBot";
 import "../styles/Dashboard.css";
 
 function Dashboard() {
@@ -242,6 +243,7 @@ function Dashboard() {
           </div>
         )}
       </div>
+      <ChatBot />
     </div>
   );
 }

@@ -7,6 +7,8 @@ import Liquidity from "./pages/Liquidity";
 import Vote from "./pages/Vote";
 import Lock from "./pages/Lock";
 import Incentivize from "./pages/Incentivize";
+import LibraLend from "./pages/LibraLend";
+import Perpetual from "./pages/Perpetual";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/vote" element={<Vote />} />
             <Route path="/lock" element={<Lock />} />
             <Route path="/incentivize" element={<Incentivize />} />
+            <Route path="/libra-lend" element={<LibraLend />} />
+            <Route path="/perpetual" element={<Perpetual />} />
           </Routes>
         </main>
       </div>
